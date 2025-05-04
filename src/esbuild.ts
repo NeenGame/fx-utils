@@ -30,7 +30,7 @@ export async function createBuilder(
 
   await Promise.all(
     environments.map(async ({ name, options }) => {
-      outfiles[name] = `dist/${name}.js`;
+      outfiles[name] = `build/${name}.js`;
       options = {
         bundle: true,
         entryPoints: [`./src/${name}/index.ts`],
